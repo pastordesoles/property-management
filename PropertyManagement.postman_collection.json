@@ -1,0 +1,274 @@
+{
+  "info": {
+    "_postman_id": "ccef2480-b664-4405-a0f5-5621beb8b980",
+    "name": "PropertyManagement",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23871435"
+  },
+  "item": [
+    {
+      "name": "DeleteProperty",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/properties/53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "53"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PatchProperty",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"address\": \"pact\",\r\n    \"ownerEmail\": \"aaaa\",\r\n    \"ownerName\": \"bbb\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/properties/53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "53"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateProperty",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"address\": \"yeeeee\",\r\n    \"description\": \"La de Ripollet 9000\",\r\n    \"ownerEmail\": \"foo@bar.com\",\r\n    \"ownerName\": \"Xavi\",\r\n    \"price\": 1000,\r\n    \"title\": \"Apartament\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/properties/53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "53"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetProperties",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateProperty",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Apartament\",\r\n    \"description\": \"La de Ripollet\",\r\n    \"ownerName\":\"Xavi\",\r\n    \"ownerEmail\":\"foo@bar.com\",\r\n    \"price\":275.45,\r\n    \"address\": \"foo street\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Multiply4Numbers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"num1\": 2,\r\n    \"num2\":3,\r\n    \"num3\":4,\r\n    \"num4\": 100\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/calculator/multiply",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "calculator",
+            "multiply"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Substract2Numbers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/calculator/substract/5/4?message=alalala",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "calculator",
+            "substract",
+            "5",
+            "4"
+          ],
+          "query": [
+            {
+              "key": "message",
+              "value": "alalala"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add2Numbers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"content\": \"adeu mon\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/calculator/add?num1=2&num2=2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "calculator",
+            "add"
+          ],
+          "query": [
+            {
+              "key": "num1",
+              "value": "2"
+            },
+            {
+              "key": "num2",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
