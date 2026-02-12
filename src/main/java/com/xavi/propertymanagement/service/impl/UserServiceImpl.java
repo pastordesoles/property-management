@@ -1,10 +1,12 @@
 package com.xavi.propertymanagement.service.impl;
 
 import com.xavi.propertymanagement.converter.UserConverter;
+import com.xavi.propertymanagement.entity.AdressEntity;
 import com.xavi.propertymanagement.entity.UserEntity;
 import com.xavi.propertymanagement.exception.BusinessException;
 import com.xavi.propertymanagement.exception.ErrorModel;
 import com.xavi.propertymanagement.model.UserDTO;
+import com.xavi.propertymanagement.repository.AddressRepository;
 import com.xavi.propertymanagement.repository.UserRepository;
 import com.xavi.propertymanagement.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserConverter userConverter;
+
+    @Autowired
+    private AddressRepository addressRepository;
 
     @Override
     public UserDTO register(UserDTO userDTO) {
@@ -39,6 +44,15 @@ public class UserServiceImpl implements UserService {
 
         UserEntity userEntity = userConverter.convertDTOToEntity(userDTO);
         userEntity = userRepository.save(userEntity);
+
+        AdressEntity adressEntity = new AdressEntity();
+        adressEntity.setCity(userDTO.getCity());
+        adressEntity.setCountry(userDTO.getCountry());
+        adressEntity.setPostalCode(userDTO.getPostalCode());
+        adressEntity.setStreet(userDTO.getStreet());
+        adressEntity.setHouseNo(userDTO.getHouseNo());
+
+        addressRepository.save(adressEntity);
         userDTO = userConverter.convertEntityToDTO(userEntity);
 
         return userDTO;

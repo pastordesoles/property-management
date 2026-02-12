@@ -9,6 +9,8 @@ public interface PropertyService {
 
     public List<PropertyDTO> getAllProperties();
 
+    public List<PropertyDTO> getAllPropertiesForUser(Long userId);
+
     public PropertyDTO updateProperty(PropertyDTO propertyDTO, Long propertyId);
 
     public PropertyDTO patchProperty(PropertyDTO propertyDTO, Long propertyId);
