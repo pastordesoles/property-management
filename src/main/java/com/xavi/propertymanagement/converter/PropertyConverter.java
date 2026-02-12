@@ -14,8 +14,7 @@ public class PropertyConverter {
         propertyEntity.setDescription(propertyDTO.getDescription());
         propertyEntity.setTitle(propertyDTO.getTitle());
         propertyEntity.setPrice(propertyDTO.getPrice());
-        propertyEntity.setOwnerEmail(propertyDTO.getOwnerEmail());
-        propertyEntity.setOwnerName(propertyDTO.getOwnerName());
+
 
         return propertyEntity;
     }
@@ -27,8 +26,6 @@ public class PropertyConverter {
         propertyDTO.setAddress(propertyEntity.getAddress());
         propertyDTO.setPrice(propertyEntity.getPrice());
         propertyDTO.setDescription(propertyEntity.getDescription());
-        propertyDTO.setOwnerEmail(propertyEntity.getOwnerEmail());
-        propertyDTO.setOwnerName(propertyEntity.getOwnerName());
 
 
         return propertyDTO;
@@ -40,8 +37,7 @@ public class PropertyConverter {
         propertyEntity.setDescription(propertyDTO.getDescription());
         propertyEntity.setTitle(propertyDTO.getTitle());
         propertyEntity.setPrice(propertyDTO.getPrice());
-        propertyEntity.setOwnerEmail(propertyDTO.getOwnerEmail());
-        propertyEntity.setOwnerName(propertyDTO.getOwnerName());
+
 
         return propertyEntity;
     }
@@ -59,12 +55,7 @@ public class PropertyConverter {
         if (propertyDTO.getPrice() != null) {
             propertyEntity.setPrice(propertyDTO.getPrice());
         }
-        if (propertyDTO.getOwnerEmail() != null) {
-            propertyEntity.setOwnerEmail(propertyDTO.getOwnerEmail());
-        }
-        if (propertyDTO.getOwnerName() != null) {
-            propertyEntity.setOwnerName(propertyDTO.getOwnerName());
-        }
+      
 
         return propertyEntity;
     }
